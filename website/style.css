@@ -1,0 +1,136 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* General page styling */
+
+  .luckiest-guy-regular {
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  body {
+    font-family: "Tahoma";
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  /* ~~HomePage~~ */
+
+  /* Header */
+  header {
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 67px;
+  }
+  
+  /* Main content */
+  main {
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  body {
+    background: #f7f7f7;
+    padding: 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+body {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  background: #2d2d2e;
+}
+
+/* 2 × 2 layout */
+.polaroid-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  justify-items: center;
+}
+
+/* Polaroid frame */
+.polaroid {
+  width: 230px;
+  font-weight: bold;
+  background: #f5f5f5;
+  padding: 15px;
+  padding-bottom: 50px; 
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transform-origin: center;
+}
+
+/* Hover effect: small tilt + lift */
+.polaroid:hover {
+  transform: translateY(-10px) rotate(-2deg);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+}
+
+/* Image section */
+.polaroid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Button */
+.polaroid-button {
+  position: absolute;
+  margin-top: 14px;
+  text-decoration: none;
+  font-family: "Tahoma";
+  color: black;
+  font-size: 1.1rem;
+  padding: 6px 14px;
+  border-radius: 6px;
+  background: transparent;
+  transition: 0.2s ease;
+}
+
+/* Button hover animation */
+.polaroid-button:hover {
+  background: white;
+  color: black;
+}
+
+/* Center button inside polaroid bottom area */
+.polaroid {
+  position: relative;
+}
+
+/* Button sits at the bottom border, centered */
+.polaroid-button {
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+}
+
+/* RESPONSIVE: stack vertically on phones */
+@media (max-width: 600px) {
+  .polaroid-grid {
+    grid-template-columns: 1fr;
+  }
+}
